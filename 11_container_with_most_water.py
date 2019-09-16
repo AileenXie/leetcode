@@ -1,4 +1,4 @@
-# Time: O(n^2)
+# Time: O(n)
 # Space: O(1)
 #
 # Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai).
