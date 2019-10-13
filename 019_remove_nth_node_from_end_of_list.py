@@ -68,4 +68,5 @@ def node_to_list(head):
 
 if __name__ == '__main__':
     result = Solution().removeNthFromEnd(list_to_node([1, 2, 3]), 3)
+    # result = Solution().removeNthFromEnd(list_to_node([1, 2, 3]), 1)
     print(node_to_list(result))

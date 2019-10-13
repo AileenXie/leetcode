@@ -44,6 +44,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    # result = Solution().isValid("([)]")
-    result = Solution().isValid("{[]}")
+    result = Solution().isValid("([)]")
+    # result = Solution().isValid("{[]}")
     print(result)
