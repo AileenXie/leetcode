@@ -21,6 +21,9 @@
 # assume that your function returns 231 − 1 when the division result overflows.
 
 
+# 实现除法取整
+# 小trick： 迭代减法时，逐步增大减的倍数（1，2，4，8...）如果一个一个减的话会超出最大循环次数
+# 相关：050
 
 class Solution:
     def divide(self, dividend: int, divisor: int) -> int:
