@@ -22,6 +22,14 @@
 ## 树
 ### 二叉树
 094_binary_tree_inorder_traversal.py  # 迭代/递归中序遍历
+
 098_validate_binary_search_tree.py  # 判断搜索二叉树
 101_symmetric_tree.py  # 判断对称二叉树（中序遍历+收尾数字&层数对比）
+
 102_binary_tree_level_order_traversal.py  # 按层遍历
+103_binary_tree_zigzag_level_order_traversal.py  # 在102基础上加了方向
+104_maximum_depth_of_binary_tree.py  # 类似102，不记录节点值，只记录层数
+
+105_construct_binary_tree_from_preorder_and_inorder_traversal*.py  # 前序+中序 建树
+108_convert_sorted_array_to_binary_search_tree*.py  # 有序序列建立二叉平衡树
+116_populating_next_right_pointers_in_each_node**.py  # 完全二叉树构建next指针
