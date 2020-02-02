@@ -48,17 +48,17 @@
 class Solution:
     def isValidSudoku(self, board) -> bool:
         for i in range(9):
-            if not self.isNotRepeat(board[i]):  # row
+            if not self.isNotRepeat(board[i]):  # row重复判断
                 return False
             vec = []
             for j in range(9):
                 vec += board[j][i]
-            if not self.isNotRepeat(vec):  # col
+            if not self.isNotRepeat(vec):  # col重复判断
                 return False
         for i in [0, 3, 6]:
             for j in [0, 3, 6]:
-                vec = board[i][j:j+3] + board[i+1][j:j+3] + board[i+2][j:j+3]
-                if not self.isNotRepeat(vec):
+                vec = board[i][j:j+3] + board[i+1][j:j+3] + board[i+2][j:j+3]  # 3x3子块数字向量化
+                if not self.isNotRepeat(vec):  # 子块重复判断
                     return False
         return True
 
@@ -68,8 +68,7 @@ class Solution:
         for i in range(len(vec)):
             if vec[i] != ".":
                 count = count + 1
-        ll = len(set(vec))
-        if len(set(vec)) < count + 1:
+        if len(set(vec)) < count + 1:  # 去重序列比未去重短 --> 有重复
             return False
         else:
             return True

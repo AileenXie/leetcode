@@ -54,7 +54,7 @@ def create(s, index=0):
 
 class Solution:
     def maxPathSum(self, root):
-        self.ans = 0
+        self.ans = float('-inf')  # 可能为负数
         self.find_max(root)
         return self.ans
 
@@ -70,6 +70,7 @@ class Solution:
 if __name__ == "__main__":
     s = [-10,9,20,None,None,15,7]
     s = [1,2,3]
+    s = [-3]
     tree = create(s)
     ans = Solution().maxPathSum(tree)
     print(ans)
