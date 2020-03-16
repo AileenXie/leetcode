@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time : 2020/3/4 7:36 PM
 # @Author : aileen
-# @File : 1210***_minimum_moves_to_reach_target_with_rotations_.py
+# @File : 1210***-_minimum_moves_to_reach_target_with_rotations_.py
 # @Software: PyCharm
 
 
