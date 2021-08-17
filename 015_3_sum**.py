@@ -51,7 +51,7 @@ class Solution:
         l = len(nums)
         ans = []
         i = 0
-        while i < l - 2:
+        while i < l - 2:  # 最后2个数不用考虑
             # 避免重复1
             while 0 < i < l - 2 and nums[i] == nums[i - 1]:
                 i += 1
@@ -87,11 +87,42 @@ class Solution:
         return ans
 
 
+# 二刷
+# class Solution:
+#     def threeSum(self, nums) -> int:
+#         nums.sort()
+#         n = len(nums)
+#         ans = []
+#         i = 0
+#         flag = 0
+#         while i < n - 2:
+#             while 0 < i < n - 2 and nums[i] == nums[i - 1]: i += 1
+#             res = 0 - nums[i]
+#             p, q = i + 1, n - 1
+#             while p < q:
+#                 if flag:  # 只在找到符合条件的数组之后，进行邻近数字的重复判断，避免重复结果。每步都做重复判断会很慢。
+#                     while i + 1 < p < q and nums[p] == nums[p - 1]: p += 1
+#                     while p < q < n - 1 and nums[q] == nums[q + 1]: q -= 1
+#                     if p >= q: break  # 上面移动后已经不满足p<q了， test case [-4,2,2,2,2]
+#                     flag = 0
+#                 if nums[p] + nums[q] == res:
+#                     ans.append([nums[i], nums[p], nums[q]])
+#                     p += 1
+#                     q -= 1
+#                     flag = 1
+#                 elif nums[p] + nums[q] < res:
+#                     p += 1
+#                 else:
+#                     q -= 1
+#             i += 1
+#         return ans
+
+
 if __name__ == '__main__':
-    result = Solution().threeSum([-1, 0, 1, 2, -1, -4])
+    # result = Solution().threeSum([-1, 0, 1, 2, -1, -4])
     # result = Solution().threeSum([-2,0,0,2,2])
     # result = Solution().threeSum([0, 0, 0, 0])
-    # result = Solution().threeSum([-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6])
+    result = Solution().threeSum([-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6])
     # result = Solution().threeSum([0, -4, -1, -4, -2, -3, 2])
     # result = Solution().threeSum([-2, 0, 0, 2, 2])
     # result = Solution().threeSum([2,-3,0,-2,-5,-5,-4,1,2,-2,2,0,2,-4])
